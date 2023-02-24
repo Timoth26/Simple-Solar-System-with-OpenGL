@@ -405,7 +405,7 @@ void Sky() {
 	GLbyte* pBytes;
 	GLint ImWidth, ImHeight, ImComponents;
 	GLenum ImFormat;
-	pBytes = LoadTGAImage("space3.tga", &ImWidth, &ImHeight, &ImComponents, &ImFormat);
+	pBytes = LoadTGAImage("textures/space3.tga", &ImWidth, &ImHeight, &ImComponents, &ImFormat);
 	glTexImage2D(GL_TEXTURE_2D, 0, ImComponents, ImWidth, ImHeight, 0, ImFormat, GL_UNSIGNED_BYTE, pBytes);
 	free(pBytes);
 	glEnable(GL_TEXTURE_2D);
@@ -510,16 +510,16 @@ void RenderScene(void)
 			0.0, location, 0.0);
 	}
 
-	Planet(0, "slonce.tga");
-	Planet(1, "merkury.tga");
-	Planet(2, "wenus.tga");
-	Planet(3, "ziemia.tga");
-	Planet(4, "mars.tga");
-	Planet(5, "jowisz.tga");
-	Planet(6, "saturn.tga");
-	Planet(7, "uran.tga");
-	Planet(8, "neptun.tga");
-	Moon("ksiezyc.tga");
+	Planet(0, "textures/slonce.tga");
+	Planet(1, "textures/merkury.tga");
+	Planet(2, "textures/wenus.tga");
+	Planet(3, "textures/ziemia.tga");
+	Planet(4, "textures/mars.tga");
+	Planet(5, "textures/jowisz.tga");
+	Planet(6, "textures/saturn.tga");
+	Planet(7, "textures/uran.tga");
+	Planet(8, "textures/neptun.tga");
+	Moon("textures/ksiezyc.tga");
 	Sky();
 	glFlush();
 	glutSwapBuffers();
